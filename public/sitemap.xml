@@ -5,6 +5,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://whats-my-ip-six.vercel.app/what-is-an-ip-address</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://whats-my-ip-six.vercel.app/privacy</loc>
     <priority>0.3</priority>
   </url>

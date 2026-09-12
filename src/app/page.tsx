@@ -1,9 +1,29 @@
 import IpLookup from "./components/IpLookup";
 import Link from "next/link";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "What's My IP",
+  url: "https://whats-my-ip-six.vercel.app",
+  applicationCategory: "UtilitiesApplication",
+  operatingSystem: "Any",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  description:
+    "Free, instant public IP address lookup showing location, ISP, and browser details.",
+};
+
 export default function Home() {
   return (
     <main className="flex-1 flex flex-col items-center px-4 py-16 gap-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="text-center max-w-2xl">
         <h1 className="text-3xl sm:text-4xl font-bold mb-3">
           What&apos;s My IP Address?
@@ -54,6 +74,9 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 function Footer() {
   return (
     <footer className="text-xs text-white/40 flex gap-4">
+      <Link href="/what-is-an-ip-address" className="hover:text-white/70">
+        What is an IP address?
+      </Link>
       <Link href="/privacy" className="hover:text-white/70">
         Privacy Policy
       </Link>
