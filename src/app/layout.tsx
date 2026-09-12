@@ -12,6 +12,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6888500425928718"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="antialiased min-h-screen flex flex-col">
         {children}
       </body>
